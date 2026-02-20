@@ -1,0 +1,99 @@
+DATASET:
+  PRESET:
+    ANN:
+    - Annotations/400_senior
+    - Annotations/400_junior
+    BONE_INDICES:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 16
+    - 17
+    - 18
+    HEATMAP_SIZE:
+    - 128
+    - 128
+    IMAGE_SIZE:
+    - 512
+    - 512
+    METHOD_TYPE: heatmap
+    NUM_JOINTS: 19
+    NUM_JOINTS_BONE: 15
+    NUM_JOINTS_SOFT: 4
+    RAW_IMAGE_SIZE:
+    - 512
+    - 512
+    ROOT: /home/jingyu/Projects/python/vscode/Jingyu/Landmark/secondCeph/data/ISBI2015/
+    SIGMA: 3
+    SOFT_INDICES:
+    - 12
+    - 13
+    - 14
+    - 15
+    TEST:
+      IMG_PREFIX: RawImage/Test2Data
+    TRAIN:
+      AUG:
+        ROT_FACTOR: 30
+        SCALE_FACTOR: 0.3
+        SHIFT_FACTOR:
+        - 0.15
+        - 0.15
+        USE_NOISE: true
+        USE_ARTIFACTS: true
+        #USE_ARTIFACTS_MULTI: null
+        #USE_ARTIFACTS_MULTIPLUS: null
+        USE_PRIOR_HEATMAPS: null
+      IMG_PREFIX: RawImage/TrainingData
+    VAL:
+      IMG_PREFIX: RawImage/Test1Data
+  TYPE: Dataset_ISBI_newresize
+LOSS:
+  TYPE: RLELoss
+  RESIDUAL: null
+  STRUCT_CONSTRAINT: null
+  STRUCT_LOSS_WEIGHT: 0.1
+MODEL:
+  HIDDEN_LIST: -1
+  IN_CHANNELS: 3
+  NUM_LAYERS: 18
+  PRETRAINED: ''
+  PRETRAINED_RIGHT: true # whether the model is pretrained or not
+  TRY_LOAD: ''
+  TYPE: HeatmapBasisNFR_numJoints_Dynamic_MLP_align
+  NUM_FC_FILTERS:
+  - -1
+  NUM_BASES: 2
+  KL_WEIGHT: 0.01
+  HID_DIM: 4
+TRAIN:
+  BATCH_SIZE: 8
+  BEGIN_EPOCH: 0
+  END_EPOCH: 300
+  GRAD_CLIP:
+    ENABLED: true
+    MAX_NORM: 1
+    NORM_TYPE: 2
+  LR: 0.0004
+  LR_SCHEDULE:
+    END_FACTOR: 0.01
+    TYPE: linearLR
+    T_MAX: 300
+  OPTIMIZER: adam
+  WORLD_SIZE: 2
+VALIDATE:
+  RADII:
+  - 2.0
+  - 2.5
+  - 3.0
+  - 4.0
+  SHOWNORM: minmaxNorm

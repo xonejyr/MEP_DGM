@@ -3,22 +3,7 @@ DATASET:
     ANN:
     - Annotations/400_senior
     - Annotations/400_junior
-    BONE_INDICES:
-    - 0
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 9
-    - 10
-    - 11
-    - 16
-    - 17
-    - 18
+
     HEATMAP_SIZE:
     - 128
     - 128
@@ -27,18 +12,12 @@ DATASET:
     - 512
     METHOD_TYPE: heatmap
     NUM_JOINTS: 19
-    NUM_JOINTS_BONE: 15
-    NUM_JOINTS_SOFT: 4
     RAW_IMAGE_SIZE:
     - 512
     - 512
     ROOT: /home/jingyu/Projects/python/vscode/Jingyu/Landmark/secondCeph/data/ISBI2015/
     SIGMA: 3
-    SOFT_INDICES:
-    - 12
-    - 13
-    - 14
-    - 15
+
     TEST:
       IMG_PREFIX: RawImage/Test2Data
     TRAIN:

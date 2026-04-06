@@ -27,9 +27,14 @@ The goal of this repository is to demonstrate the core ideas and modeling compon
 ## citation us
 ```
 @article{jingyu_efficient_2025,
-  title={Efficient Adaptive Distribution Priors with Multi-exposure Perturbation for Cephalometric Landmark Localization},
-  author={Gao, Jingyu and Zeng, Heng and Xu, Hui and Xue, Chaoran and Mezei, J{\'o}zsef and Chen, Yuanyuan},
-  journal={Available at SSRN 5645052},
-  doi={10.2139/ssrn.5645052}
+  title = {Efficient adaptive distribution priors with multi-exposure perturbation for cephalometric landmark localization},
+  author = {Jingyu Gao and Heng Zeng and Hui Xu and Chaoran Xue and Jozsef Mezei and Yuanyuan Chen},
+  journal = {Biomedical Signal Processing and Control},
+  volume = {120},
+  pages = {110120},
+  year = {2026},
+  issn = {1746-8094},
+  doi = {https://doi.org/10.1016/j.bspc.2026.110120},
+  url = {https://www.sciencedirect.com/science/article/pii/S1746809426006749},
 }
 ```
